@@ -14,3 +14,13 @@
         currentCount++;
     }
 }
+
+
+<RadzenButton Click="@ButtonClicked" Text="@texxt"></RadzenButton>
+@code {
+    string texxt = "";
+    void ButtonClicked()
+    {
+        texxt = new Random().Next(100, 500).ToString();
+    }
+}
