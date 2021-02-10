@@ -6,21 +6,5 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
-
 
 <RadzenButton Click="@ButtonClicked" Text="@texxt"></RadzenButton>
-@code {
-    string texxt = "";
-    void ButtonClicked()
-    {
-        texxt = new Random().Next(100, 500).ToString();
-    }
-}
