@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Radzen;
 using System.Linq;
 
 namespace BlazorApp1.Server
@@ -41,6 +42,11 @@ namespace BlazorApp1.Server
 
             services.AddAuthentication()
                 .AddIdentityServerJwt();
+            /*radzen elements*/
+            services.AddScoped<DialogService>();
+            services.AddScoped<NotificationService>();
+            services.AddScoped<TooltipService>();
+            services.AddScoped<ContextMenuService>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
